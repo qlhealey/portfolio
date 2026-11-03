@@ -1,0 +1,250 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap');
+
+
+body {
+    font-family: "Merriweather", Arial, sans-serif;
+    background-color: #1B1717;
+    color: white;
+    height: 100vh;
+    text-align: center;
+}
+
+h1 {
+    padding-top: 20px;
+}
+
+#main {
+    padding-bottom: 75px;
+}
+
+.welcome {
+
+    padding-top: 350px;
+    padding-left: 230px;
+    text-align: left !important;
+}
+
+
+Nav {
+    display: flex;
+    text-align: center;
+    position: sticky !important;
+    top: 0px;
+    z-index: 10;
+}
+
+.navbar {
+    background-color: #4F0917;
+    font-size: 20px;
+    align-items: center;
+}
+
+.navbar-brand {
+    padding: 0px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.navbar-brand img {
+    padding: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    border-bottom: 2px solid #4F0917;
+    transition: 500ms all;
+}
+
+
+.navbar-brand:hover img {
+    border-bottom: 2px solid white;
+
+}
+
+Nav a {
+    color: white !important;
+    padding: 0px;
+    text-decoration: none;
+}
+
+.nav-item {
+    margin: auto;
+}
+
+.nav-item a {
+    transition: 500ms all;
+}
+
+.nav-item .portfolio {
+    padding-right: 10px;
+}
+
+.nav-link {
+    opacity: 0.8;
+    transition: 500ms all;
+}
+
+.dropdown-toggle::after {
+    margin-left: 10px;
+}
+
+.nav-link.show,
+.nav-link:hover,
+.nav-item a:hover {
+    opacity: 1 !important;
+    transition: 500ms all;
+}
+
+
+.dropdown-menu,
+.dropdown-item:active,
+.dropdown-item:hover {
+    background-color: #4F0917;
+}
+
+iframe {
+    margin-top: 10px;
+}
+
+#gallery {
+    margin-top: 30px;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+#show {
+    padding: 0px;
+    margin-bottom: 20px;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+}
+
+.row {
+    margin: 10px;
+}
+
+#show img {
+    width: 100%;
+    border: 5px solid #1B1717;
+    transition: 1s all;
+    border-radius: 15px;
+}
+
+#show:hover img {
+    border: 5px solid #4F0917;
+    opacity: 0.5;
+}
+
+#info {
+    position: absolute;
+    bottom: 8px;
+    left: 25px;
+    opacity: 0;
+    transition: 500ms;
+    z-index: 2;
+}
+
+#show:hover #info {
+    opacity: 100%;
+}
+
+#info h4 {
+    font-style: italic;
+}
+
+#info h5 {
+    margin-top: 20px;
+}
+
+.content {
+    margin-top: 30px;
+    padding: 15px 50px 15px 50px;
+    border-radius: 2%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #4F0917;
+}
+
+.content p, ol, ul, li {
+    text-align: left;
+    font-size: 20px;
+}
+
+.content p {
+    margin-top: 25px;
+}
+
+.content ol, ul, li {
+    margin-top: 10px;
+}
+
+.content a {
+    color: white;
+} 
+
+h2 {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+form {
+    display: flex;
+    width: 375px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+}
+
+input {
+    width: 375px;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 20px;
+}
+
+textarea {
+    width: 375px;
+    height: 130px;
+    padding: 10px;
+    margin-top: 5px;
+    resize: none;
+    margin-bottom: 10px;
+}
+
+
+#footer {
+    background-color: black;
+    color: white;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+    width: 100%;
+    z-index: 10;
+}
+
+
+.download,
+#submit {
+    background-color: #7B1A24;
+    color: white;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 25px;
+    border: 2px solid white;
+    transition: 500ms;
+    margin-top: 10px;
+    padding: 9px 18px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.download:hover,
+#submit:hover {
+    background-color: #D38888;
+    color: #1B1717;
+    transition: 500ms;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+}
