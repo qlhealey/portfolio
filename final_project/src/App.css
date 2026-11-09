@@ -1,20 +1,44 @@
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap');
+@import url('https://fonts.cdnfonts.com/css/larsseit-font-family');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap');
 
 
 body {
     font-family: "Merriweather", Arial, sans-serif;
     background-color: #1B1717;
     color: white;
-    height: 100vh;
     text-align: center;
+    overflow-x: hidden;
+}
+
+.App {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* .container {
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+} */
+
+.container {
+    position: relative;
+    max-width: 95vw;
+    left: calc((100vw - 100%) / 2);
 }
 
 h1 {
     padding-top: 20px;
+    font-size: 7vh;
+
 }
 
 #main {
-    padding-bottom: 75px;
+    position: relative;
+    left: calc((100vw - 100%) / 2);
 }
 
 .welcome {
@@ -26,8 +50,6 @@ h1 {
 
 
 Nav {
-    display: flex;
-    text-align: center;
     position: sticky !important;
     top: 0px;
     z-index: 10;
@@ -41,22 +63,11 @@ Nav {
 
 .navbar-brand {
     padding: 0px;
-    margin-left: auto;
-    margin-right: auto;
 }
 
 .navbar-brand img {
     padding: 0px;
-    margin-left: auto;
-    margin-right: auto;
     border-bottom: 2px solid #4F0917;
-    transition: 500ms all;
-}
-
-
-.navbar-brand:hover img {
-    border-bottom: 2px solid white;
-
 }
 
 Nav a {
@@ -66,15 +77,14 @@ Nav a {
 }
 
 .nav-item {
-    margin: auto;
+    margin-left: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    /* outline: 1px solid white; */
 }
 
 .nav-item a {
     transition: 500ms all;
-}
-
-.nav-item .portfolio {
-    padding-right: 10px;
 }
 
 .nav-link {
@@ -82,9 +92,29 @@ Nav a {
     transition: 500ms all;
 }
 
+.dropdown {
+    padding: 0px;
+    margin: 0px;
+}
+
+a.dropdown-toggle.nav-link {
+    padding: 0px !important;
+}
+
 .dropdown-toggle::after {
     margin-left: 10px;
+    margin-right: 0px;
+    padding: 0px;
 }
+
+/* .dropdown-menu {
+    padding-right: 0px !important;
+    margin-right: 0px;
+    width: 100px;
+    outline: 1px solid white;
+} */
+
+
 
 .nav-link.show,
 .nav-link:hover,
@@ -93,11 +123,81 @@ Nav a {
     transition: 500ms all;
 }
 
+.navbar-nav .dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+/* .nav-item .dropdown {
+    outline: 1px solid white;
+} */
+
+
+.image {
+    max-height: 200px;
+}
+
+
+.dropdown-menu {
+    width: 100%;
+    text-align: right;
+    animation: slideUp 0.3s ease-in-out;
+}
+
+/* @keyframes slideUp {
+  from {
+    transform: translateY(-8px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+} */
+
+
+
+.dropdown-item {
+    padding-right: 10px;
+    padding-left: 0px;
+    font-size: 17px;
+}
 
 .dropdown-menu,
 .dropdown-item:active,
 .dropdown-item:hover {
     background-color: #4F0917;
+}
+
+.bio {
+    outline: 1px solid white;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.section {
+    max-width: 95vw;
+    height: fit-content;
+    outline: 1px solid white;
+}
+
+.text {
+    outline: 1px solid white;
+    height: fit-content;
+}
+
+
+.text a {
+    color: white !important;
+    padding: 0px;
+}
+
+.text a:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #4F0917 !important;
+    transition: 500ms all;
+    border-radius: 5px;
 }
 
 iframe {
@@ -118,8 +218,80 @@ iframe {
     justify-content: center;
 }
 
-.row {
-    margin: 10px;
+.row.show {
+    margin: 10px 5px;
+    justify-content: center;
+    align-items: center;
+}
+
+#about p {
+    font-size: 22px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 3vh;
+}
+
+.left {
+    float: left;
+    margin-right: 40px;
+    margin-left: 20px;
+}
+
+.right {
+    float: right;
+    margin-left: 40px;
+    margin-right: 20px;
+}
+
+.section {
+    padding: 10px 50px;
+    margin-top: 10px;
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-height: 400px;
+    padding: 20px;
+
+}
+
+#about .row {
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    max-height: 400px;
+}
+
+#footer .row {
+    margin: 10px 5px;
+    justify-content: center;
+    align-items: center;
+}
+
+#homeFooter .row {
+    margin: 10px 5px;
+    justify-content: center;
+    align-items: center;
+}
+
+#homeFooter .row div {
+    padding: 0px;
+}
+
+#footer .row div {
+    padding: 0px;
+}
+
+.row .show div {
+    padding: 0px;
+}
+
+#about img {
+    max-height: inherit;
+    width: auto;
 }
 
 #show img {
@@ -164,26 +336,29 @@ iframe {
     background-color: #4F0917;
 }
 
-.content p, ol, ul, li {
+.content p,
+ol,
+ul,
+li {
     text-align: left;
     font-size: 20px;
 }
 
-.content p {
-    margin-top: 25px;
-}
 
-.content ol, ul, li {
+.content ol,
+ul,
+li {
     margin-top: 10px;
 }
 
 .content a {
     color: white;
-} 
+}
 
 h2 {
     padding-top: 20px;
     padding-bottom: 20px;
+    font-size: 4.5vh;
 }
 
 form {
@@ -214,14 +389,40 @@ textarea {
 
 
 #footer {
+    margin-top: auto;
+    background-color: black;
+    color: white;
+    right: calc((100vw - 100%) / 2);
+    /* padding-left: calc((100vw - 100%) / 2); */
+    padding-left: 15px;
+    padding-right: 15px;
+    bottom: 0;
+    text-align: left;
+    width: 100vw !important;
+    font-size: 12px;
+    display: flex;
+    position: relative;
+}
+
+#footer .row {
+    width: 100%;
+}
+
+
+#homeFooter {
     background-color: black;
     color: white;
     position: fixed;
     bottom: 0;
     left: 0;
-    text-align: center;
+    text-align: left;
     width: 100%;
     z-index: 10;
+    font-size: 12px;
+    right: calc((100vw - 100%) / 2);
+    /* padding-left: calc((100vw - 100%) / 2); */
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
 
@@ -247,4 +448,22 @@ textarea {
     color: #1B1717;
     transition: 500ms;
     border: 2px solid rgba(255, 255, 255, 0.5);
+}
+
+.copyright {
+    font-family: "Fraunces", Arial, sans-serif;
+    font-size: 13px;
+    margin-right: 2px;
+}
+
+.heart {
+    font-family: "Fraunces", Arial, sans-serif;
+    line-height: 0;
+    margin-right: 2px;
+    margin-left: 2px;
+    font-size: 14px;
+}
+
+.lu {
+    text-align: right;
 }

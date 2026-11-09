@@ -1,8 +1,12 @@
+import PageTitle from "./PageTitle";
+import Footer from "./Footer";
+
 export default function Resume() {
 
 
     return (
         <>
+        <PageTitle title="Resume" />
         <div id="main">
             <h1>Resume</h1>
             <p>
@@ -16,6 +20,7 @@ export default function Resume() {
                 </iframe>
             </p>
             </div>
+            <Footer />
         </>
     );
 }

@@ -1,3 +1,6 @@
+
+import PageTitle from "./PageTitle";
+import Footer from "./Footer";
 import { Link } from "react-router-dom";
 
 export default function Summary() {
@@ -5,6 +8,7 @@ export default function Summary() {
 
     return (
         <>
+            <PageTitle title="Summary" />
             <div id="main">
 
                 <h1>Final Project Summary</h1>
@@ -84,6 +88,7 @@ export default function Summary() {
 
 
             </div>
+            <Footer />
         </>
     );
 }

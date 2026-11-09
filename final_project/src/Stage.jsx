@@ -1,13 +1,17 @@
+import PageTitle from "./PageTitle";
+import Footer from "./Footer";
+
 export default function Stage() {
 
 
     return (
         <>
+        <PageTitle title="Stage Management" />
         <div id="main">
             <h1>Stage Management</h1>
 
             <div id="gallery" className="container-fluid">
-                <div className="row">
+                <div className="row show">
                     <div id="show" className="col-md-4 d-flex">
                         <img id="thumbnail" src="./img/stage/bs-thumbnail.jpg" alt="Blue Stockings"/>
                             <div id="info">
@@ -36,7 +40,7 @@ export default function Stage() {
                             </div>
                     </div>
                 </div>
-                <div className="row">
+                <div className="row show">
                     <div id="show" className="col-md-4 d-flex">
                         <img id="thumbnail" src="./img/stage/frozen-thumbnail.jpg" alt="Frozen KIDS"/>
                             <div id="info">
@@ -68,6 +72,7 @@ export default function Stage() {
 
             </div>
             </div>
+            <Footer />
         </>
     );
 }

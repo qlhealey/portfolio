@@ -1,3 +1,6 @@
+import HomeFooter from './HomeFooter';
+import PageTitle from './PageTitle';
+
 export default function Home() {
 
     const homeBackground = {
@@ -15,11 +18,15 @@ export default function Home() {
     return (
         <>
 
-            <div style={homeBackground}>
                 
+        <PageTitle title="Home" />
+
+            <div style={homeBackground}>
                     <h1 className="welcome">Welcome!</h1>
                 
             </div>
+
+            <HomeFooter />
 
         </>
     );

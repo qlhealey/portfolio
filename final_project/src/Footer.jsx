@@ -4,10 +4,13 @@ export default function Footer() {
     return (
         <>
             <div id='footer' className='container-fluid'>
-                <div>
-                    <p className='col-12 pt-3'>
-                        &copy; 2025 Quinn Healey, University of Southern California
-                    </p>
+                <div className='row'>
+                    
+                       <div className='col-5'><span className='copyright'>©</span> 2026.
+                       Coded with <span className='heart'>♡</span> by Quinn Healey</div>
+                       <div className='col-4'> </div>
+                       <div className='lu col-3'>Last Updated: 11.06.26</div>
+                    
                 </div>
             </div>
         </>

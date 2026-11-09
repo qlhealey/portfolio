@@ -1,8 +1,15 @@
+
+import Footer from "./Footer";
+import PageTitle from "./PageTitle";
+
 export default function Contact() {
 
 
     return (
         <>
+
+        <PageTitle title="Contact" />
+
             <div id="main">
 
                 <h1>Contact</h1>
@@ -21,6 +28,7 @@ export default function Contact() {
                 </form>
 
             </div>
+            <Footer />  
         </>
     );
 }

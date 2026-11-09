@@ -1,14 +1,19 @@
+import PageTitle from "./PageTitle";
+
+import Footer from "./Footer";
+
 export default function Lighting() {
 
 
     return (
         <>
+            <PageTitle title="Lighting Design" />
             <div id="main">
 
                 <h1>Lighting Design</h1>
 
                 <div id="gallery" className="container-fluid">
-                    <div className="row justify-content-evenly">
+                    <div className="row show justify-content-evenly">
                         <div id="show" className="col-md-5 d-flex">
                             <img src="./img/lighting/lk-thumbnail.jpg" alt="The Lion King JR"/>
                                 <div id="info">
@@ -28,7 +33,7 @@ export default function Lighting() {
                                 </div>
                         </div>
                     </div>
-                    <div className="row justify-content-evenly">
+                    <div className="row show justify-content-evenly">
                         <div id="show" className="col-md-5 d-flex">
                             <img src="./img/lighting/mp-thumbnail.png" alt="Mary Poppins JR"/>
                                 <div id="info">
@@ -51,6 +56,7 @@ export default function Lighting() {
 
                 </div>
             </div>
+            <Footer />
         </>
     );
 }
