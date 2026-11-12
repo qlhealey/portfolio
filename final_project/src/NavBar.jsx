@@ -1,4 +1,3 @@
-import logo from './assets/img/large-name.png';
 import { Routes, Route, NavLink } from 'react-router-dom';
 import React, { useState } from 'react';
 import About from './About';
@@ -41,7 +40,7 @@ export default function NavBar() {
       <Navbar expand='lg'>
         <Container>
           <Navbar.Brand className='col-4'>
-            <NavLink to='/gif'><img src={logo} align='left' width='auto' height='60px' alt='' /></NavLink>
+            <NavLink to='/gif'><img src='./public/name-large.svg' align='left' width='auto' height='60px' alt='' /></NavLink>
           </Navbar.Brand>
 
           <Navbar.Toggle aria-controls='basic-navbar-nav' onClick={() => setOpen(!open)}
