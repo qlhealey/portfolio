@@ -1,4 +1,4 @@
-import logo from './public/img/large-name.png';
+import logo from './assets/img/large-name.png';
 import { Routes, Route, NavLink } from 'react-router-dom';
 import React, { useState } from 'react';
 import About from './About';
