@@ -1,5 +1,6 @@
 import HomeFooter from './HomeFooter';
 import PageTitle from './PageTitle';
+import './Home.css';
 
 export default function Home() {
 
@@ -13,6 +14,7 @@ export default function Home() {
         objectFit: 'cover',
         marginTop: '-76px',
     }
+    
 
 
     return (
@@ -22,8 +24,10 @@ export default function Home() {
         <PageTitle title="Home" />
 
             <div style={homeBackground}>
+                <div id='homeMain'>
                     <h1 className="welcome">Welcome!</h1>
                 
+                </div>
             </div>
 
             <HomeFooter />

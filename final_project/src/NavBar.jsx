@@ -1,7 +1,7 @@
 import { Routes, Route, NavLink } from 'react-router-dom';
-import React from 'react';
+import React, { useState } from 'react';
 import About from './About';
-import Summary from './Summary';  
+import Summary from './Summary';
 import PageTitle from './PageTitle';
 import Home from './Home';
 import Resume from './Resume';
@@ -10,12 +10,15 @@ import Lighting from './Lighting';
 import Portfolio from './Portfolio';
 import Design from './Design';
 import Contact from './Contact';
+import Gif from './Gif';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css'
 import Nav from 'react-bootstrap/Nav';
 import Container from 'react-bootstrap/Container';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import Navbar from 'react-bootstrap/Navbar';
+import Collapse from 'react-bootstrap/Collapse';
+
 
 export default function NavBar() {
 
@@ -26,6 +29,9 @@ export default function NavBar() {
       opacity: isActive ? '1.0' : '0.8',
     });
 
+  const [open, setOpen] = useState(false);
+
+
   return (
     <>
 
@@ -34,17 +40,22 @@ export default function NavBar() {
       <Navbar expand='lg'>
         <Container>
           <Navbar.Brand className='col-4'>
-            <NavLink to='/summary'><img src='./img/name-transparent.png' align='left' width='auto' height='60px' alt='' /></NavLink>
+            <NavLink to='/gif'><img src='./img/large-name.png' align='left' width='auto' height='60px' alt='' /></NavLink>
           </Navbar.Brand>
 
-          <Navbar.Toggle aria-controls='basic-navbar-nav' />
+          <Navbar.Toggle aria-controls='basic-navbar-nav' onClick={() => setOpen(!open)}
+            aria-expanded={open}>
+            <span className={`bar ${open ? 'open' : ''}`}></span>
+            <span className={`bar ${open ? 'open' : ''}`}></span>
+            <span className={`bar ${open ? 'open' : ''}`}></span>
+          </Navbar.Toggle>
           <Navbar.Collapse id='basic-navbar-nav'>
             <Nav className='flex-grow-1'>
 
               <Nav.Item>
                 <NavLink to='/' style={navLinkStyles}>Home</NavLink>
               </Nav.Item>
-              
+
               <Nav.Item>
                 <NavLink to='/about' style={navLinkStyles}>About</NavLink>
               </Nav.Item>
@@ -55,18 +66,18 @@ export default function NavBar() {
 
 
               <Nav.Item className='drop'>
-                <NavDropdown title='Performing Arts' align='end'>                  
-                  
+                <NavDropdown title='Performing Arts' align='end'>
 
 
-                  <NavDropdown.Item><NavLink to='/stage' style={navLinkStyles}>Stage Management</NavLink></NavDropdown.Item>
-                  <NavDropdown.Item><NavLink to='/lighting' style={navLinkStyles}>Lighting Design</NavLink></NavDropdown.Item>
+
+                  <NavDropdown.Item as={NavLink} to='/stage' style={navLinkStyles}>Stage Management</NavDropdown.Item>
+                  <NavDropdown.Item as={NavLink} to='/lighting' style={navLinkStyles}>Lighting Design</NavDropdown.Item>
                 </NavDropdown>
 
 
-                
-                
-                
+
+
+
               </Nav.Item>
 
               <Nav.Item>
@@ -96,6 +107,7 @@ export default function NavBar() {
         <Route path='/design' element={<Design />} />
         <Route path='/contact' element={<Contact />} />
         <Route path='/summary' element={<Summary />} />
+        <Route path='/gif' element={<Gif />} />
       </Routes>
 
 
